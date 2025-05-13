@@ -3,18 +3,6 @@ import PortfolioHeader from '@/components/portfolio-header';
 import Section from '@/components/portfolio-section';
 import WorkItem from '@/components/work-item';
 
-// Minimal text link component with arrow
-const TextLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
-  <a
-    href={href}
-    className="text-gray-800 dark:text-gray-200 hover:opacity-70 underline-offset-4 hover:underline"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    {children}↗
-  </a>
-);
-
 export default function Home() {
   // Configure your personal information here
   const personalInfo = {

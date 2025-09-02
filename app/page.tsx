@@ -23,19 +23,19 @@ export default function Home() {
       company: "Study Snail",
       role: "Founder, Developer, Marketer",
       date: "Jul 2024 - Present",
-      url: "https:studysnail.com", // Replace with actual URL for Study Snail
+      url: "https://studysnail.com", // Replace with actual URL for Study Snail
     },
     {
       company: "Revision Dojo",
       role: "Full Stack Software Engineer",
       date: "2024",
-      url: "https:revisiondojo.com", // Replace with actual URL for Revision Dojo
+      url: "https://revisiondojo.com", // Replace with actual URL for Revision Dojo
     },
     {
       company: "ELSA",
       role: "AI Research Engineer Intern",
       date: "Jul 2024",
-      url: "https:elsaspeak.com", // Replace with actual URL for ELSA
+      url: "https://elsaspeak.com", // Replace with actual URL for ELSA
     },
     {
       company: "University of Houston-Victoria",

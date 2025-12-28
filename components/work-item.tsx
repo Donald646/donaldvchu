@@ -17,9 +17,15 @@ const WorkItem: React.FC<WorkItemProps> = ({ company, role, date, url }) => {
               href={url}
               target="_blank" 
               rel="noopener noreferrer"
-              className="font-medium hover:underline hover:opacity-75"
+              className="font-medium hover:opacity-75 flex items-center group"
             >
-              {company}
+              <span className="border-b border-gray-300 dark:border-gray-600 pb-0.5 group-hover:border-gray-600 dark:group-hover:border-gray-400 transition-colors">
+                {company}
+              </span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1 text-gray-500 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
+                <path d="M7 17L17 7" />
+                <path d="M7 7h10v10" />
+              </svg>
             </a>
           ) : (
             <span className="font-medium">{company}</span>
@@ -32,4 +38,4 @@ const WorkItem: React.FC<WorkItemProps> = ({ company, role, date, url }) => {
   );
 };
 
-export default WorkItem; 
+export default WorkItem;

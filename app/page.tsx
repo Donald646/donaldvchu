@@ -7,7 +7,7 @@ export default function Home() {
   // Configure your personal information here
   const personalInfo = {
     name: "Donald Chu",
-    title: "Student, Developer, & Researcher",
+    education: "studying cs @ columbia",
     profileImage: "/profile-placeholder.jpg", // Add your image to the public folder
     socials: {
       email: "donaldvchu@gmail.com",
@@ -24,6 +24,12 @@ export default function Home() {
       role: "Founder, Developer, Marketer",
       date: "Jul 2024 - Present",
       url: "https://studysnail.com", // Replace with actual URL for Study Snail
+    },
+    {
+      company: "Imagation",
+      role: "Founder",
+      date: "2024 - Present",
+      url: "https://imagation.com",
     },
     {
       company: "Revision Dojo",
@@ -75,7 +81,7 @@ export default function Home() {
       {/* Header with Profile */}
       <PortfolioHeader 
         name={personalInfo.name}
-        title={personalInfo.title}
+        education={personalInfo.education}
         profileImage={personalInfo.profileImage}
         socials={personalInfo.socials}
       />
@@ -83,7 +89,7 @@ export default function Home() {
       {/* About Paragraphs */}
       <div className="space-y-4 my-8">
         <p className="text-gray-700 dark:text-gray-300">
-          Currently building Study Snail, an AI-powered study tool with over 20,000 users, and building ticket software.
+          Currently building consumer apps and looking for the next thing.
         </p>
         <p className="text-gray-700 dark:text-gray-300">
           I lift weights, play basketball, and travel.
@@ -116,8 +122,14 @@ export default function Home() {
               <div className="flex-grow">
                 <div className="flex justify-between items-baseline">
                   <span className="font-medium">
-                    <a href={pub.link} target="_blank" rel="noopener noreferrer" className="hover:underline">
-                      {pub.title}
+                    <a href={pub.link} target="_blank" rel="noopener noreferrer" className="hover:opacity-75 flex items-center group">
+                      <span className="border-b border-gray-300 dark:border-gray-600 pb-0.5 group-hover:border-gray-600 dark:group-hover:border-gray-400 transition-colors">
+                        {pub.title}
+                      </span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1 text-gray-500 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
+                        <path d="M7 17L17 7" />
+                        <path d="M7 7h10v10" />
+                      </svg>
                     </a>
                   </span>
                   <span className="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap ml-2">{pub.date}</span>

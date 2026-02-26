@@ -9,7 +9,7 @@ interface WorkItemProps {
 
 const WorkItem: React.FC<WorkItemProps> = ({ company, role, date, url }) => {
   return (
-    <div className="py-2">
+    <div className="py-2 -mx-3 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors duration-200">
       <div className="flex-grow">
         <div className="flex justify-between items-baseline">
           {url ? (

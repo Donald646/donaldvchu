@@ -62,6 +62,15 @@ export default function Home() {
     }
   ];
   
+  // Free Time data
+  const freeTimeData = [
+    {
+      name: "LLM Playground",
+      description: "AI experiments — chat, word games, and prediction markets",
+      url: "https://github.com/Donald646/llmplayground",
+    },
+  ];
+
   // Honors & Awards data
   const honorsData = [
     {
@@ -79,15 +88,17 @@ export default function Home() {
   return (
     <div className="max-w-2xl mx-auto px-6">
       {/* Header with Profile */}
-      <PortfolioHeader 
-        name={personalInfo.name}
-        education={personalInfo.education}
-        profileImage={personalInfo.profileImage}
-        socials={personalInfo.socials}
-      />
+      <div className="opacity-0 animate-fade-in" style={{ animationDelay: '0ms' }}>
+        <PortfolioHeader 
+          name={personalInfo.name}
+          education={personalInfo.education}
+          profileImage={personalInfo.profileImage}
+          socials={personalInfo.socials}
+        />
+      </div>
       
       {/* About Paragraphs */}
-      <div className="space-y-4 my-8">
+      <div className="space-y-4 my-8 opacity-0 animate-fade-in" style={{ animationDelay: '100ms' }}>
         <p className="text-gray-700 dark:text-gray-300">
           Currently building consumer apps and looking for the next thing.
         </p>
@@ -100,62 +111,103 @@ export default function Home() {
       </div>
 
       {/* Work Section */}
-      <Section title="Work">
-        <div className="space-y-1">
-          {workExperience.map((work, index) => (
-            <WorkItem
-              key={index}
-              company={work.company}
-              role={work.role}
-              date={work.date}
-              url={work.url}
-            />
-          ))}
-        </div>
-      </Section>
+      <div className="opacity-0 animate-fade-in" style={{ animationDelay: '200ms' }}>
+        <Section title="Work">
+          <div className="space-y-1">
+            {workExperience.map((work, index) => (
+              <WorkItem
+                key={index}
+                company={work.company}
+                role={work.role}
+                date={work.date}
+                url={work.url}
+              />
+            ))}
+          </div>
+        </Section>
+      </div>
 
       {/* Publications Section */}
-      <Section title="Publications">
-        <div className="space-y-3">
-          {publicationsData.map((pub, index) => (
-             <div key={index} className="py-2">
-              <div className="flex-grow">
-                <div className="flex justify-between items-baseline">
-                  <span className="font-medium">
-                    <a href={pub.link} target="_blank" rel="noopener noreferrer" className="hover:opacity-75 flex items-center group">
-                      <span className="border-b border-gray-300 dark:border-gray-600 pb-0.5 group-hover:border-gray-600 dark:group-hover:border-gray-400 transition-colors">
-                        {pub.title}
-                      </span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1 text-gray-500 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
-                        <path d="M7 17L17 7" />
-                        <path d="M7 7h10v10" />
-                      </svg>
-                    </a>
-                  </span>
-                  <span className="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap ml-2">{pub.date}</span>
+      <div className="opacity-0 animate-fade-in" style={{ animationDelay: '300ms' }}>
+        <Section title="Publications">
+          <div className="space-y-3">
+            {publicationsData.map((pub, index) => (
+               <div key={index} className="py-2 -mx-3 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors duration-200">
+                <div className="flex-grow">
+                  <div className="flex justify-between items-baseline">
+                    <span className="font-medium">
+                      <a href={pub.link} target="_blank" rel="noopener noreferrer" className="hover:opacity-75 flex items-center group">
+                        <span className="border-b border-gray-300 dark:border-gray-600 pb-0.5 group-hover:border-gray-600 dark:group-hover:border-gray-400 transition-colors">
+                          {pub.title}
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1 text-gray-500 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
+                          <path d="M7 17L17 7" />
+                          <path d="M7 7h10v10" />
+                        </svg>
+                      </a>
+                    </span>
+                    <span className="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap ml-2">{pub.date}</span>
+                  </div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400 mt-0.5">{pub.authors}</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400 italic mt-0.5">{pub.journal}</div>
                 </div>
-                <div className="text-sm text-gray-600 dark:text-gray-400 mt-0.5">{pub.authors}</div>
-                <div className="text-sm text-gray-500 dark:text-gray-400 italic mt-0.5">{pub.journal}</div>
               </div>
-            </div>
-          ))}
-        </div>
-      </Section>
+            ))}
+          </div>
+        </Section>
+      </div>
 
       {/* Honors & Awards Section */}
-      <Section title="Honors & Awards">
-        <div className="space-y-3">
-          {honorsData.map((honor, index) => (
-            <div key={index} className="flex justify-between py-2 items-baseline">
-              <div>
-                <p className="font-medium">{honor.award}</p>
-                {honor.details && <p className="text-sm text-gray-600 dark:text-gray-400">{honor.details}</p>}
+      <div className="opacity-0 animate-fade-in" style={{ animationDelay: '400ms' }}>
+        <Section title="Honors & Awards">
+          <div className="space-y-3">
+            {honorsData.map((honor, index) => (
+              <div key={index} className="flex justify-between py-2 items-baseline -mx-3 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors duration-200">
+                <div>
+                  <p className="font-medium">{honor.award}</p>
+                  {honor.details && <p className="text-sm text-gray-600 dark:text-gray-400">{honor.details}</p>}
+                </div>
+                <span className="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap ml-2">{honor.year}</span>
               </div>
-              <span className="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap ml-2">{honor.year}</span>
-            </div>
-          ))}
-        </div>
-      </Section>
+            ))}
+          </div>
+        </Section>
+      </div>
+
+      {/* Free Time Section */}
+      <div className="opacity-0 animate-fade-in" style={{ animationDelay: '500ms' }}>
+        <Section title="Free Time">
+          <div className="space-y-1">
+            {freeTimeData.map((project, index) => (
+              <div key={index} className="py-2 -mx-3 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors duration-200">
+                <div className="flex-grow">
+                  <div className="flex justify-between items-baseline">
+                    {project.url ? (
+                      <a
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-medium hover:opacity-75 flex items-center group"
+                      >
+                        <span className="border-b border-gray-300 dark:border-gray-600 pb-0.5 group-hover:border-gray-600 dark:group-hover:border-gray-400 transition-colors">
+                          {project.name}
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1 text-gray-500 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
+                          <path d="M7 17L17 7" />
+                          <path d="M7 7h10v10" />
+                        </svg>
+                      </a>
+                    ) : (
+                      <span className="font-medium">{project.name}</span>
+                    )}
+                  </div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400 mt-0.5">{project.description}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Section>
+      </div>
     </div>
   );
 }

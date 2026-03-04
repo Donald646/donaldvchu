@@ -20,10 +20,22 @@ export default function Home() {
   // Work experience data
   const workExperience = [
     {
-      company: "Study Snail",
-      role: "Founder, Developer, Marketer",
-      date: "Jul 2024 - Present",
-      url: "https://studysnail.com", // Replace with actual URL for Study Snail
+      company: "Phia",
+      role: "Forward Deployed Engineering Intern",
+      date: "2025 - Present",
+      url: "https://phia.com",
+    },
+    {
+      company: "Waddle",
+      role: "Founder",
+      date: "2024 - Present",
+      url: "https://waddlecouples.com",
+    },
+    {
+      company: "Oclete",
+      role: "Founder",
+      date: "2024 - Present",
+      url: "https://oclete.com",
     },
     {
       company: "Imagation",
@@ -32,22 +44,28 @@ export default function Home() {
       url: "https://imagation.com",
     },
     {
+      company: "Study Snail",
+      role: "Founder",
+      date: "2024 - Present",
+      url: "https://studysnail.com",
+    },
+    {
       company: "Revision Dojo",
       role: "Full Stack Software Engineer",
       date: "2024",
-      url: "https://revisiondojo.com", // Replace with actual URL for Revision Dojo
+      url: "https://revisiondojo.com",
     },
     {
       company: "ELSA",
       role: "AI Research Engineer Intern",
       date: "Jul 2024",
-      url: "https://elsaspeak.com", // Replace with actual URL for ELSA
+      url: "https://elsaspeak.com",
     },
     {
       company: "University of Houston-Victoria",
       role: "Research Assistant | Professor Tomitaka",
       date: "May 2023 - Aug 2023",
-      url: "https://uhv.edu/", // Replace with actual URL for UHV
+      url: "https://uhv.edu/",
     }
   ];
 
@@ -100,13 +118,13 @@ export default function Home() {
       {/* About Paragraphs */}
       <div className="space-y-4 my-8 opacity-0 animate-fade-in" style={{ animationDelay: '100ms' }}>
         <p className="text-gray-700 dark:text-gray-300">
-          Currently building consumer apps and looking for the next thing.
+          Building consumer apps. Currently working on Waddle, a couples app for long-distance relationships.
         </p>
         <p className="text-gray-700 dark:text-gray-300">
           I lift weights, play basketball, and travel.
         </p>
         <p className="text-gray-700 dark:text-gray-300">
-          reach out at <a href={`mailto:${personalInfo.socials.email}`} className="underline hover:opacity-75">{personalInfo.socials.email}</a>.
+          Reach out at <a href={`mailto:${personalInfo.socials.email}`} className="underline hover:opacity-75">{personalInfo.socials.email}</a>.
         </p>
       </div>
 

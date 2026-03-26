@@ -26,28 +26,10 @@ export default function Home() {
       url: "https://phia.com",
     },
     {
-      company: "Waddle",
-      role: "Founder",
-      date: "2024 - Present",
-      url: "https://waddlecouples.com",
-    },
-    {
       company: "Oclete",
       role: "Founder",
       date: "2024 - Present",
       url: "https://oclete.com",
-    },
-    {
-      company: "Imagation",
-      role: "Founder",
-      date: "2024 - Present",
-      url: "https://imagation.com",
-    },
-    {
-      company: "Study Snail",
-      role: "Founder",
-      date: "2024 - Present",
-      url: "https://studysnail.com",
     },
     {
       company: "Revision Dojo",
@@ -118,7 +100,7 @@ export default function Home() {
       {/* About Paragraphs */}
       <div className="space-y-4 my-8 opacity-0 animate-fade-in" style={{ animationDelay: '100ms' }}>
         <p className="text-gray-700 dark:text-gray-300">
-          Building consumer apps. Currently working on Waddle, a couples app for long-distance relationships.
+          claude code enthusiast, interested in the application layer of AI.
         </p>
         <p className="text-gray-700 dark:text-gray-300">
           I lift weights, play basketball, and travel.
